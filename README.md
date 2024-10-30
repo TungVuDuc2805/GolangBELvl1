@@ -1,1 +1,1 @@
-# GolangBELvl1 the repository for homework and notes
+# GolangBELvl1 the repository for homeworks and notes
