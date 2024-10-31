@@ -6,10 +6,6 @@ import (
 )
 func main() {
 	n := getLen()
-	for n <= 0 {
-		fmt.Println("Please enter a positive number")
-		n = getLen()
-	}
     array := setValues(n)
 	sum := 0
 	max := 0
@@ -27,7 +23,7 @@ func main() {
 	}
 
 	fmt.Println("Array sum: ", sum)
-	fmt.Println("Average: ", sum/n)
+	fmt.Printf("Average: %.1f\n", float64(sum)/float64(n))
 	fmt.Println("Maximum number: ", max)
 	fmt.Println("Minimum number: ", min)
 	sort.Ints(array)
@@ -37,8 +33,11 @@ func main() {
 func getLen() int {
 	var n int
 	fmt.Println("Numbers of elements in your array: ")
-    fmt.Scan(&n)
-
+	fmt.Scan(&n)
+	for n <= 0 {
+		fmt.Println("Please enter a positive number")
+		n = getLen()
+	}
 	return n
 }
 
