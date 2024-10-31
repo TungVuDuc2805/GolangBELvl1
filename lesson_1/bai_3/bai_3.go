@@ -6,7 +6,7 @@ import (
 )
 func main() {
 	n := getLen()
-    array := setValues(n)
+    array := getValues(n)
 	sum := 0
 	max := 0
 	min := 1_000_000_000
@@ -41,7 +41,7 @@ func getLen() int {
 	return n
 }
 
-func setValues(n int) []int {
+func getValues(n int) []int {
     a := make([]int, n)
     for i := 0; i < n; i++ {
 		fmt.Printf("Element %d: ", i)
